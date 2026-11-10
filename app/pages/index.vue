@@ -8,7 +8,7 @@ useSeo({
     'Salão de beleza na Rua das Algas, 389, Jurerê Internacional. Mechas, morena iluminada, corte, mega hair, Kérastase, penteado, maquiagem e unhas. Nota 5,0 no Google. Agende pelo WhatsApp.',
   path: '/',
 })
-useHead({ link: [{ rel: 'preload', as: 'image', href: '/video/hero-morena-iluminada.webp', fetchpriority: 'high' }] })
+useHead({ link: [{ rel: 'preload', as: 'image', href: '/video/hero-morena-iluminada-v2.webp', fetchpriority: 'high' }] })
 useJsonLd([salonSchema(), websiteSchema(), faqSchema(faqs)])
 
 const ticker = ['Mechas e loiros', 'Morena iluminada', 'Corte e escova', 'Mega hair', 'Kérastase', 'Penteado', 'Maquiagem', 'Unhas em gel', 'Keune', 'Truss']

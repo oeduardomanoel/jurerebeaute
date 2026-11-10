@@ -76,7 +76,7 @@ export const services: Service[] = [
     facts: ['Morena iluminada', 'Pontos de luz', 'Mechas em tons quentes', 'Técnica de baixa manutenção'],
     image: 'morena-iluminada-tons-quentes-1',
     gallery: ['morena-iluminada-tons-quentes-2', 'morena-iluminada-ondas', 'pontos-de-luz-castanho', 'morena-iluminada-tons-quentes-3', 'morena-iluminada-salao'],
-    video: { src: '/video/hero-morena-iluminada.mp4', poster: '/video/hero-morena-iluminada.webp' },
+    video: { src: '/video/hero-morena-iluminada-v2.mp4', poster: '/video/hero-morena-iluminada-v2.webp' },
     quotes: [
       { text: 'Fizemos renovação do corte e cor. A Letícia como sempre arrasa muito! Exatamente como eu queria! Atendimento personalizado e impecável!!', author: 'Liana F., no Google' },
     ],

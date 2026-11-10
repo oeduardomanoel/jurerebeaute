@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { site, waLink } from '#shared/data/site'
 
-// Hero no layout do guia de marca: texto à esquerda, Reel real do salão à direita com arcos dourados.
+// Hero no layout do guia de marca: texto à esquerda, Reel real do salão à direita com luz dourada no fundo.
 // O nome do salão já está no logo do cabeçalho, então o título fala da proposta.
 const root = ref<HTMLElement>()
 const video = ref<HTMLVideoElement>()
@@ -27,7 +27,6 @@ onMounted(() => {
   const ctx = gsap.context(() => {
     const st = { trigger: root.value, start: 'top top', end: 'bottom top', scrub: true }
     gsap.to('.hr-media video', { yPercent: 8, scale: 1.06, ease: 'none', scrollTrigger: st })
-    gsap.to('.hr-arcs', { rotate: 12, ease: 'none', scrollTrigger: st })
     gsap.to('.hr-copy', { yPercent: -12, opacity: 0, ease: 'none', scrollTrigger: { ...st, end: '75% top' } })
   }, root.value)
   onBeforeUnmount(() => ctx.revert())
@@ -54,8 +53,8 @@ onMounted(() => {
     <div class="hr-media" aria-hidden="true">
       <video
         ref="video"
-        src="/video/hero-morena-iluminada.mp4"
-        poster="/video/hero-morena-iluminada.webp"
+        src="/video/hero-morena-iluminada-v2.mp4"
+        poster="/video/hero-morena-iluminada-v2.webp"
         muted
         loop
         playsinline
@@ -64,17 +63,6 @@ onMounted(() => {
       <div class="hr-grade" />
     </div>
 
-    <svg class="hr-arcs" viewBox="0 0 600 600" fill="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="hr-arc" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#f8d488" />
-          <stop offset=".55" stop-color="#e9b04c" />
-          <stop offset="1" stop-color="#b9801f" />
-        </linearGradient>
-      </defs>
-      <circle class="arc arc-1" cx="300" cy="300" r="290" pathLength="1" />
-      <circle class="arc arc-2" cx="300" cy="300" r="262" pathLength="1" />
-    </svg>
 
     <div class="hr-copy container">
       <h1 id="hr-title" class="hr-title">
@@ -162,52 +150,6 @@ onMounted(() => {
   pointer-events: none;
 }
 
-.hr-arcs {
-  position: absolute;
-  left: 58%;
-  top: 27svh;
-  z-index: 1;
-  width: min(120vw, 560px);
-  aspect-ratio: 1;
-  translate: -50% -50%;
-  pointer-events: none;
-  overflow: visible;
-}
-
-.arc {
-  stroke: url(#hr-arc);
-  vector-effect: non-scaling-stroke;
-  transform-origin: 300px 300px;
-}
-
-.arc-1 {
-  stroke-width: 2.5;
-  stroke-dasharray: 0.58 0.42;
-  transform: rotate(-80deg);
-  filter: drop-shadow(0 0 6px rgba(233, 176, 76, 0.9)) drop-shadow(0 0 18px rgba(233, 176, 76, 0.45));
-}
-
-.arc-2 {
-  stroke-width: 1;
-  stroke-opacity: 0.6;
-  stroke-dasharray: 0.4 0.6;
-  transform: rotate(-60deg);
-}
-
-.motion .arc {
-  animation: arc-draw 2.2s var(--ease) both 0.3s;
-}
-
-.motion .arc-2 {
-  animation-delay: 0.55s;
-}
-
-@keyframes arc-draw {
-  from {
-    stroke-dashoffset: 0.58;
-    opacity: 0;
-  }
-}
 
 /* ---------- texto ---------- */
 
@@ -382,11 +324,6 @@ a.hr-proof-in:hover {
       radial-gradient(70% 70% at 55% 45%, rgba(233, 176, 76, 0.16), transparent 70%);
   }
 
-  .hr-arcs {
-    left: 77%;
-    top: 50%;
-    width: min(44vw, 80vh, 760px);
-  }
 
   .hr-copy {
     margin-top: 0;
