@@ -136,7 +136,7 @@ fieldset {
 legend {
   margin-bottom: 14px;
   font-size: 0.875rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--gold);
@@ -174,7 +174,7 @@ legend {
   display: grid;
   gap: 10px;
   font-size: 0.875rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--gold);
@@ -282,7 +282,7 @@ legend {
 }
 
 .ag-hours .today {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .ag-hours dt span {

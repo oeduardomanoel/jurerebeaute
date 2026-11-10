@@ -109,7 +109,7 @@ li.dim .sv-row {
 .sv-i {
   grid-area: i;
   font-family: var(--f-display);
-  font-style: italic;
+  font-weight: 300;
   color: var(--gold);
   min-width: 2.2em;
 }

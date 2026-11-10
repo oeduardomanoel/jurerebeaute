@@ -121,7 +121,7 @@ onBeforeUnmount(() => io?.disconnect())
 
 .ex-t {
   font-size: 0.8125rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);

@@ -1,7 +1,7 @@
 /* ==========================================================================
    Jurerê Beauté · sistema visual
    Preto e grafite da sacola, dourado do anel do logo, marfim das paredes do salão.
-   Títulos em DM Serif Display, texto em Manrope: as duas pensadas para leitura fácil.
+   Montserrat em títulos e texto, Allison (manuscrita, a mais próxima do logo) nos destaques.
    ========================================================================== */
 
 :root {
@@ -19,8 +19,9 @@
   --line: rgba(26, 24, 21, 0.14);
   --line-dark: rgba(230, 194, 122, 0.22);
 
-  --f-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
-  --f-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-display: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-script: 'Allison', 'Brush Script MT', cursive;
 
   --gutter: clamp(20px, 5vw, 72px);
   --max: 1360px;
@@ -31,7 +32,7 @@
   --t-body: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
   --t-lead: clamp(1.1875rem, 1.08rem + 0.45vw, 1.4375rem);
   --t-h3: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
-  --t-h2: clamp(2.25rem, 1.7rem + 2.6vw, 4.25rem);
+  --t-h2: clamp(2rem, 1.5rem + 2.3vw, 3.75rem);
   --t-h1: clamp(3rem, 2rem + 5vw, 7rem);
 
   --header-h: 78px;
@@ -59,7 +60,7 @@ body {
   font-family: var(--f-body);
   font-size: var(--t-body);
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
@@ -182,8 +183,8 @@ ol {
   align-items: center;
   gap: 12px;
   font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gold-text);
 }
@@ -204,22 +205,30 @@ ol {
   font-family: var(--f-display);
   font-weight: 400;
   font-size: var(--t-h2);
-  line-height: 1.04;
-  letter-spacing: -0.01em;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
   text-wrap: balance;
 }
 
 .h3 {
   font-family: var(--f-display);
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--t-h3);
-  line-height: 1.15;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
+/* o destaque do guia de marca: a palavra em script dourada, como o "Jurerê" do logo */
 .h2 em,
 .h3 em,
-.display em {
-  font-style: italic;
+.display em,
+.script {
+  font-family: var(--f-script);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 0.7;
+  letter-spacing: 0;
   color: var(--gold-text);
 }
 
@@ -265,9 +274,9 @@ ol {
   padding: 0 28px;
   border-radius: 999px;
   border: 1.5px solid currentColor;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  font-size: 0.9875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   white-space: nowrap;
   overflow: hidden;
   isolation: isolate;

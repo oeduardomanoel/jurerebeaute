@@ -84,7 +84,7 @@ onBeforeUnmount(() => {
   flex: 1;
   background: var(--gold);
   color: var(--noir);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1rem;
 }
 

@@ -50,6 +50,7 @@ watch(() => route.fullPath, () => (open.value = false))
   <header class="hd" :class="{ solid: scrolled || !overHero, hidden, open }">
     <div class="hd-bar container">
       <NuxtLink to="/" class="hd-logo" aria-label="Jurerê Beauté, início">
+        <img class="hd-ring" src="/brand/jurere-beaute-selo-160.webp" width="160" height="160" alt="" decoding="async" />
         <BrandLogo class="hd-brand" />
       </NuxtLink>
 
@@ -58,8 +59,8 @@ watch(() => route.fullPath, () => (open.value = false))
       </nav>
 
       <div class="hd-actions">
-        <a class="btn btn--gold hd-cta" :href="waLink('Oi! Vim pelo site e quero agendar um horário no Jurerê Beauté.')" target="_blank" rel="noopener" data-cta="header">
-          <Icon name="whatsapp" /><span>Agendar</span>
+        <a class="btn hd-cta" :href="waLink('Oi! Vim pelo site e quero agendar uma avaliação no Jurerê Beauté.')" target="_blank" rel="noopener" data-cta="header">
+          <Icon name="whatsapp" /><span>Agende sua avaliação</span>
         </a>
         <button class="hd-burger" type="button" :aria-expanded="open" aria-controls="menu" @click="open = !open">
           <span class="sr-only">{{ open ? 'Fechar menu' : 'Abrir menu' }}</span>
@@ -127,8 +128,21 @@ watch(() => route.fullPath, () => (open.value = false))
   color: var(--gold);
 }
 
+.hd-ring {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--line-dark);
+  transition: transform 0.8s var(--ease), box-shadow 0.4s;
+}
+
+.hd-logo:hover .hd-ring {
+  transform: rotate(-12deg);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+
 .hd-brand {
-  font-size: clamp(32px, 3vw, 46px);
+  font-size: clamp(26px, 2.4vw, 38px);
   transition: transform 0.6s var(--ease), opacity 0.3s;
 }
 
@@ -182,7 +196,12 @@ watch(() => route.fullPath, () => (open.value = false))
 
 .hd-cta {
   min-height: 46px;
-  padding: 0 20px;
+  padding: 0 16px;
+  color: var(--gold-hi);
+  border-color: var(--gold);
+  background: rgba(18, 17, 16, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .hd-cta span {
@@ -221,7 +240,17 @@ watch(() => route.fullPath, () => (open.value = false))
   transform: translateY(-4.5px) rotate(-45deg);
 }
 
-@media (min-width: 520px) {
+@media (max-width: 380px) {
+  .hd-brand {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .hd-cta {
+    padding: 0 22px;
+  }
+
   .hd-cta span {
     display: inline;
   }
@@ -255,6 +284,7 @@ watch(() => route.fullPath, () => (open.value = false))
 
 .menu-nav a {
   font-family: var(--f-display);
+  font-weight: 300;
   font-size: clamp(2.4rem, 10vw, 3.4rem);
   line-height: 1.2;
   transition: color 0.3s, transform 0.5s var(--ease);

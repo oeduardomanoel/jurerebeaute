@@ -41,13 +41,16 @@ li {
   gap: 32px;
   padding-right: 32px;
   font-family: var(--f-display);
-  font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.6rem);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 1rem + 1.4vw, 2.1rem);
   line-height: 1;
   white-space: nowrap;
 }
 
 li.alt {
-  font-style: italic;
+  font-family: var(--f-script);
+  font-size: 1.6em;
+  line-height: 0.8;
 }
 
 .mq-dot {

@@ -74,7 +74,10 @@ useJsonLd([
 }
 
 .sx-title em {
-  font-style: italic;
+  font-family: var(--f-script);
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 0.7;
   color: var(--gold-hi);
 }
 
@@ -128,7 +131,7 @@ useJsonLd([
 
 .sx-n {
   font-family: var(--f-display);
-  font-style: italic;
+  font-weight: 300;
   font-size: 1.25rem;
   color: var(--gold-text);
 }

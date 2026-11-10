@@ -102,7 +102,7 @@ onBeforeUnmount(() => io?.disconnect())
 
 .cs-n {
   font-family: var(--f-display);
-  font-style: italic;
+  font-weight: 300;
   font-size: 1.5rem;
   color: var(--gold-text);
   line-height: 1.2;

@@ -27,8 +27,8 @@ export default defineNuxtConfig({
         { name: 'ICBM', content: `${site.geo.lat}, ${site.geo.lng}` },
       ],
       link: [
-        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/dm-serif-display-normal.woff2', crossorigin: '' },
-        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/manrope-normal.woff2', crossorigin: '' },
+        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/allison.woff2', crossorigin: '' },
+        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/montserrat.woff2', crossorigin: '' },
         { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/favicon-48.png' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
