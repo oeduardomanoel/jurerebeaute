@@ -38,7 +38,7 @@ onMounted(() => {
 
       <div class="mf-main">
         <p class="mf-text display">
-          <template v-for="(w, i) in words" :key="i"><span class="mf-word">{{ w }}</span>{{ ' ' }}</template>
+          <span v-for="(w, i) in words" :key="i" class="mf-word">{{ i < words.length - 1 ? `${w} ` : w }}</span>
         </p>
         <div class="mf-sign" v-reveal>
           <Monogram class="mf-mono" />
