@@ -73,7 +73,7 @@ export function salonSchema() {
     url: `${base}/`,
     telephone: site.phone,
     image: [`${base}/og/jurere-beaute.jpg`, `${base}/images/morena-iluminada-tons-quentes-1-1080.webp`, `${base}/images/mechas-efeito-natural-1-1080.webp`],
-    logo: `${base}/icon-512.png`,
+    logo: `${base}/brand/jurere-beaute-selo-512.png`,
     priceRange: '$$$',
     currenciesAccepted: 'BRL',
     address: {

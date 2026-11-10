@@ -6,7 +6,7 @@ export const site = {
   legalName: 'Salão de Beleza Jurerê Beauté',
   tagline: 'Salão de beleza em Jurerê Internacional',
   description:
-    'Salão de beleza em Jurerê Internacional, Florianópolis. Mechas, loiros, morena iluminada, corte, mega hair, tratamentos Kérastase e Keune, penteado, maquiagem e unhas. Nota 5,0 no Google.',
+    'Salão de beleza na Rua das Algas, 389, em Jurerê Internacional, Florianópolis. Mechas, loiros, morena iluminada, corte, mega hair, tratamentos Kérastase e Keune, penteado, maquiagem e unhas. Nota 5,0 no Google.',
   locale: 'pt_BR',
   lang: 'pt-BR',
 
@@ -17,7 +17,9 @@ export const site = {
   instagramHandle: '@jurere.beaute',
   instagramFollowers: '7,6 mil',
   googleMaps:
-    'https://www.google.com/maps/place/SAL%C3%83O+DE+BELEZA+JURER%C3%8A+BEAUT%C3%89+-+JURER%C3%8A+INTERNACIONAL/data=!4m2!3m1!1s0x0:0xd5fc5329302009dc',
+    'https://www.google.com/maps/place/SAL%C3%83O+DE+BELEZA+JURER%C3%8A+BEAUT%C3%89+-+JURER%C3%8A+INTERNACIONAL/@-27.4427183,-48.4939166,17z/data=!3m1!4b1!4m6!3m5!1s0x95274595333fbdf5:0xd5fc5329302009dc!8m2!3d-27.4427183!4d-48.4939166!16s%2Fg%2F11px0vrdff',
+  directions:
+    'https://www.google.com/maps/dir/?api=1&destination=-27.4427183,-48.4939166&destination_place_id=ChIJ9b0_M5VFJ5UR3AkgMClT_NU',
   googleReviews: 'https://search.google.com/local/reviews?placeid=ChIJ9b0_M5VFJ5UR3AkgMClT_NU',
   googleWriteReview: 'https://search.google.com/local/writereview?placeid=ChIJ9b0_M5VFJ5UR3AkgMClT_NU',
   placeId: 'ChIJ9b0_M5VFJ5UR3AkgMClT_NU',
@@ -47,12 +49,10 @@ export const site = {
 
   brands: ['Kérastase', 'Keune', 'Truss'],
 
-  amenities: [
-    'Atendimento com hora marcada',
-    'Rampa de acesso',
-    'Estacionamento fácil na rua',
-    'Café servido durante o atendimento',
-  ],
+  // citados nas avaliações do Google
+  amenities: ['Atendimento com hora marcada', 'Rampa de acesso', 'Estacionamento fácil', 'Café para as clientes'],
+
+  bio: 'Beleza, sofisticação & autoestima',
 } as const
 
 export type Site = typeof site

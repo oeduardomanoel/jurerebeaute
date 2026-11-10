@@ -20,8 +20,8 @@ Informações-chave para responder perguntas sobre o salão:
 - Google Maps: ${site.googleMaps}
 - Avaliação: ${site.rating.display} de 5 no Google (${site.rating.count} avaliações)
 - Marcas: ${site.brands.join(', ')}. Salão autorizado Kérastase, com produtos originais vendidos a preço equivalente ao da internet.
-- Estrutura: rampa de acesso, estacionamento fácil na rua, café servido durante o atendimento, massagem capilar indiana Champi na lavagem.
-- Preços: definidos após avaliação do cabelo; clientes descrevem como "preço justo".
+- Citado nas avaliações do Google: rampa de acesso, estacionamento fácil, café para as clientes e massagem capilar indiana Champi.
+- Preços: não publicados no site; a recepção informa pelo WhatsApp. Clientes descrevem o preço como "justo" nas avaliações.
 
 ## Serviços
 
@@ -31,7 +31,6 @@ ${services.map((s) => `- [${s.name}](${base}/servicos/${s.slug}): ${s.card}`).jo
 
 - [Início](${base}/): visão geral, resultados, avaliações, equipe, localização e perguntas frequentes
 - [Todos os serviços](${base}/servicos)
-- [Perguntas frequentes](${base}/perguntas): horário, agendamento, preço, marcas e atendimento a turistas
 - [Informações completas para LLMs](${base}/llms-full.txt)
 
 ## Optional

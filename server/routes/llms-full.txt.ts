@@ -14,11 +14,8 @@ ${s.lead}
 
 ${s.body.join('\n\n')}
 
-Inclui: ${s.highlights.join(', ')}.
-
-Como funciona:
-${s.steps.map((st, i) => `${i + 1}. ${st.title}: ${st.text}`).join('\n')}
-
+Inclui: ${s.facts.join(', ')}.
+${s.quotes.length ? `\nAvaliações:\n${s.quotes.map((q) => `- "${q.text}" (${q.author})`).join('\n')}\n` : ''}
 Perguntas frequentes:
 ${s.faq.map((f) => `P: ${f.q}\nR: ${f.a}`).join('\n\n')}
 `,
@@ -42,11 +39,14 @@ ${s.faq.map((f) => `P: ${f.q}\nR: ${f.a}`).join('\n\n')}
 - Instagram: ${site.instagram} (${site.instagramFollowers} seguidores)
 - Google: nota ${site.rating.display}, ${site.rating.count} avaliações (${site.googleReviews})
 - Marcas: ${site.brands.join(', ')}. Salão autorizado Kérastase.
-- Comodidades: ${site.amenities.join('; ')}; massagem capilar indiana Champi.
+- Citado nas avaliações do Google: ${site.amenities.join('; ')}; massagem capilar indiana Champi.
 
-## Como o salão trabalha
+## Nas palavras do salão (Instagram)
 
-Antes de qualquer química, a equipe faz uma avaliação do cabelo: histórico químico, base, porosidade e rotina. A técnica e o produto são escolhidos depois disso. O salão chama de "ritual de continuidade" o acompanhamento com tratamento e cuidado em casa depois do serviço.
+- "No Jurerê Beauté, realçamos a sua beleza sem transformar quem você é."
+- "Aqui ritual de continuidade é regra! Não para correção e sim para tratamento que todo cabelo precisa."
+- Sobre loiros: "o segredo não está apenas no produto: envolve diagnóstico, histórico químico, colorimetria, técnica e respeito aos limites do fio."
+- Bio: "${site.bio}".
 
 ## Serviços
 
