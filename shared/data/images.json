@@ -1,0 +1,364 @@
+{
+ "morena-iluminada-tons-quentes-1": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#715c52"
+ },
+ "morena-iluminada-tons-quentes-2": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#645242"
+ },
+ "morena-iluminada-tons-quentes-3": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#4d3f36"
+ },
+ "morena-iluminada-ondas": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#765f50"
+ },
+ "morena-iluminada-salao": {
+  "w": 480,
+  "h": 853,
+  "sizes": [
+   480
+  ],
+  "color": "#6c5b50"
+ },
+ "pontos-de-luz-castanho": {
+  "w": 1080,
+  "h": 1404,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#7f6858"
+ },
+ "mechas-efeito-natural-1": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#766b60"
+ },
+ "mechas-efeito-natural-2": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#70645b"
+ },
+ "mechas-efeito-natural-3": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#756757"
+ },
+ "loiro-dourado-ondas": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#795f48"
+ },
+ "loiro-processo-tonalizacao": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#564742"
+ },
+ "loiro-dourado-natural": {
+  "w": 480,
+  "h": 853,
+  "sizes": [
+   480
+  ],
+  "color": "#a4907a"
+ },
+ "loiro-ultimate-blonde-keune": {
+  "w": 480,
+  "h": 853,
+  "sizes": [
+   480
+  ],
+  "color": "#816a4f"
+ },
+ "loiro-mechas-liso": {
+  "w": 480,
+  "h": 852,
+  "sizes": [
+   480
+  ],
+  "color": "#8f7b68"
+ },
+ "mega-hair-loiro-iluminado": {
+  "w": 480,
+  "h": 853,
+  "sizes": [
+   480
+  ],
+  "color": "#967e6c"
+ },
+ "mega-hair-cabelao": {
+  "w": 480,
+  "h": 851,
+  "sizes": [
+   480
+  ],
+  "color": "#877768"
+ },
+ "loiro-escova-volume": {
+  "w": 480,
+  "h": 854,
+  "sizes": [
+   480
+  ],
+  "color": "#a38a77"
+ },
+ "colorista-keune-1": {
+  "w": 1086,
+  "h": 1448,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#766a62"
+ },
+ "colorista-keune-produtos": {
+  "w": 1087,
+  "h": 1448,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#796457"
+ },
+ "keune-vital-nutrition": {
+  "w": 1086,
+  "h": 1448,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#766c66"
+ },
+ "keune-velvet-smooth": {
+  "w": 1290,
+  "h": 1720,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#5b524b"
+ },
+ "keune-smooth-operator": {
+  "w": 1086,
+  "h": 1448,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#64524b"
+ },
+ "loiro-superclareadora-3000": {
+  "w": 480,
+  "h": 853,
+  "sizes": [
+   480
+  ],
+  "color": "#807778"
+ },
+ "penteado-semi-preso-trancas-1": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#85776c"
+ },
+ "penteado-semi-preso-trancas-2": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#71655e"
+ },
+ "penteado-semi-preso-trancas-3": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#6c655f"
+ },
+ "penteado-semi-preso-escultural-1": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#4b4238"
+ },
+ "penteado-semi-preso-escultural-2": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#4b4036"
+ },
+ "maquiagem-rabo-alto-1": {
+  "w": 1080,
+  "h": 1308,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#756457"
+ },
+ "maquiagem-rabo-alto-2": {
+  "w": 1080,
+  "h": 1308,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#706357"
+ },
+ "maquiagem-coque-atemporal": {
+  "w": 1080,
+  "h": 1440,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#9c8d82"
+ },
+ "maquiagem-loira-natural": {
+  "w": 480,
+  "h": 853,
+  "sizes": [
+   480
+  ],
+  "color": "#aa9383"
+ },
+ "sorriso-cliente-cabelo-hidratado": {
+  "w": 480,
+  "h": 853,
+  "sizes": [
+   480
+  ],
+  "color": "#926f60"
+ },
+ "unhas-rosa-nail-art-1": {
+  "w": 1080,
+  "h": 1246,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#8b756c"
+ },
+ "unhas-rosa-nail-art-2": {
+  "w": 1080,
+  "h": 1246,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#897066"
+ },
+ "unhas-esmaltacao-processo": {
+  "w": 480,
+  "h": 554,
+  "sizes": [
+   480
+  ],
+  "color": "#a27d7e"
+ },
+ "unhas-rosa-detalhe": {
+  "w": 480,
+  "h": 554,
+  "sizes": [
+   480
+  ],
+  "color": "#957061"
+ },
+ "unhas-blindagem-gel": {
+  "w": 480,
+  "h": 853,
+  "sizes": [
+   480
+  ],
+  "color": "#a2876f"
+ },
+ "sacola-personalizada": {
+  "w": 480,
+  "h": 853,
+  "sizes": [
+   480
+  ],
+  "color": "#625a53"
+ }
+}
