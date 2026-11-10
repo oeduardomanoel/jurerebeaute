@@ -360,5 +360,25 @@
    480
   ],
   "color": "#625a53"
+ },
+ "hero-salao-morena-iluminada": {
+  "w": 1080,
+  "h": 360,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#7e685c"
+ },
+ "salao-jurere-ambiente": {
+  "w": 1080,
+  "h": 810,
+  "sizes": [
+   480,
+   800,
+   1080
+  ],
+  "color": "#755e4e"
  }
 }

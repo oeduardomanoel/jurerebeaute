@@ -31,6 +31,7 @@ ${services.map((s) => `- [${s.name}](${base}/servicos/${s.slug}): ${s.card}`).jo
 
 - [Início](${base}/): visão geral, resultados, avaliações, equipe, localização e perguntas frequentes
 - [Todos os serviços](${base}/servicos)
+- [Perguntas frequentes](${base}/perguntas): horário, agendamento, preço, marcas e atendimento a turistas
 - [Informações completas para LLMs](${base}/llms-full.txt)
 
 ## Optional

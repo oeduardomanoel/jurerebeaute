@@ -16,6 +16,7 @@ export default defineEventHandler((event) => {
       freq: 'monthly',
       images: [s.image, ...s.gallery.slice(0, 3)].map((g) => img(g, `${s.name} em Jurerê Internacional`)),
     })),
+    { loc: '/perguntas', priority: '0.7', freq: 'monthly', images: [] as string[] },
     { loc: '/privacidade', priority: '0.2', freq: 'yearly', images: [] as string[] },
   ]
 

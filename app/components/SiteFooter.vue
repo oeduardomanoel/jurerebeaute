@@ -1,189 +1,77 @@
 <script setup lang="ts">
 import { site, waLink } from '#shared/data/site'
 import { services } from '#shared/data/services'
+
+// footer.closing (footer-visit): linha 1 o agendamento, linha 2 o endereço grande, o horário e os links.
+const props = withDefaults(defineProps<{ preselect?: string; title?: string; lead?: string }>(), {
+  preselect: '',
+  title: 'Agendar pelo WhatsApp',
+  lead: 'Escolha o serviço e quando prefere vir. A mensagem sai pronta e a recepção confirma o horário com você.',
+})
+const route = useRoute()
+const pre = computed(() => props.preselect || String(route.params.slug || ''))
 const year = new Date().getFullYear()
+const options = [...services.map((s) => ({ v: s.name, slug: s.slug })), { v: 'Sobrancelha ou depilação', slug: 'sobrancelha' }]
+const start = 'Oi! Quero agendar no Jurerê Beauté.'
 </script>
 
 <template>
-  <footer class="footer theme-dark">
-    <div class="container">
-      <div class="footer-top">
-        <NuxtLink to="/" class="footer-brand" aria-label="Jurerê Beauté, página inicial">
-          <Logo stacked />
-        </NuxtLink>
-        <p class="footer-claim">
-          Salão de beleza em Jurerê Internacional.<br />
-          Cabelo, make e unhas no mesmo endereço.
-        </p>
-      </div>
-
-      <hr class="hairline" />
-
-      <div class="footer-grid">
-        <div>
-          <h2 class="caps footer-h">Visite</h2>
-          <address>
-            <a :href="site.googleMaps" target="_blank" rel="noopener" class="footer-link">
-              {{ site.address.street }}<br />
-              Jurerê Internacional<br />
-              Florianópolis, SC · {{ site.address.postalCode }}
-            </a>
-          </address>
+  <footer id="agendar" class="footer closing footer--visit" aria-labelledby="close-h">
+    <div class="wrap">
+      <div class="closing__cta close--type">
+        <div class="section-head">
+          <h2 id="close-h">{{ props.title }}</h2>
+          <p class="t-lead">{{ props.lead }}</p>
         </div>
-        <div>
-          <h2 class="caps footer-h">Horário</h2>
-          <p>Terça a sábado<br />9h às 19h</p>
-          <p class="muted small">Domingo e segunda: fechado</p>
-        </div>
-        <div>
-          <h2 class="caps footer-h">Fale com a gente</h2>
-          <ul class="footer-list">
-            <li>
-              <a :href="waLink('Oi! Vim pelo site e quero agendar um horário no Jurerê Beauté.')" target="_blank" rel="noopener" class="footer-link"><Icon name="whatsapp" /> {{ site.phoneDisplay }}</a>
-            </li>
-            <li>
-              <a :href="site.instagram" target="_blank" rel="noopener" class="footer-link"><Icon name="instagram" /> {{ site.instagramHandle }}</a>
-            </li>
-            <li>
-              <a :href="site.googleReviews" target="_blank" rel="noopener" class="footer-link"><Icon name="star" /> 5,0 no Google</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h2 class="caps footer-h">Serviços</h2>
-          <ul class="footer-list">
-            <li v-for="s in services" :key="s.slug">
-              <NuxtLink :to="`/servicos/${s.slug}`" class="footer-link">{{ s.name }}</NuxtLink>
-            </li>
-          </ul>
+        <div class="booking" data-wa-form>
+          <div class="field">
+            <label for="b-servico">Serviço</label>
+            <select id="b-servico" name="servico">
+              <option value="">Quero uma avaliação</option>
+              <option v-for="o in options" :key="o.slug" :value="o.v" :selected="o.slug === pre">{{ o.v }}</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="b-dia">Melhor dia</label>
+            <select id="b-dia" name="dia">
+              <option value="">Qualquer dia</option>
+              <option>Terça</option><option>Quarta</option><option>Quinta</option><option>Sexta</option><option>Sábado</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="b-periodo">Período</label>
+            <select id="b-periodo" name="periodo">
+              <option value="">Tanto faz</option>
+              <option>Manhã</option><option>Tarde</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="b-nome">Seu nome</label>
+            <input id="b-nome" name="nome" type="text" autocomplete="given-name" />
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--primary" :href="waLink(start)" target="_blank" rel="noopener" data-wa-compose data-cta="agendar">Agendar pelo WhatsApp<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8" /><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5" /></svg></a>
+            <p class="booking__note">Abre o WhatsApp com a mensagem pronta. Nada sai sem você tocar em enviar.</p>
+          </div>
         </div>
       </div>
 
-      <hr class="hairline" />
-
-      <div class="footer-bottom">
-        <p>© {{ year }} {{ site.legalName }}</p>
-        <p>
-          <NuxtLink to="/privacidade" class="footer-link">Privacidade</NuxtLink>
-          <span aria-hidden="true"> · </span>
-          <a href="/llms.txt" class="footer-link">llms.txt</a>
-        </p>
+      <div class="closing__links">
+        <div class="grid">
+          <div class="span-6 stack-4">
+            <address class="footer__address">{{ site.address.street }}, Jurerê Internacional</address>
+            <p><a class="link" :href="site.googleMaps" target="_blank" rel="noopener">Traçar rota</a> &nbsp; <a class="link" :href="`tel:${site.phone.replace(/[\s-]/g, '')}`">{{ site.phoneDisplay }}</a></p>
+          </div>
+          <div class="span-6 start-7 stack-4">
+            <h3>Horário</h3>
+            <Hours />
+          </div>
+        </div>
+        <div class="footer__legal">
+          <span>&copy; {{ year }} {{ site.legalName }} &nbsp; <a href="/privacidade">Privacidade</a> &nbsp; <a href="/servicos">Serviços</a> &nbsp; <a :href="site.instagram" target="_blank" rel="noopener">Instagram</a></span>
+          <span class="credits">Fotos do Instagram do salão</span>
+        </div>
       </div>
     </div>
-    <div class="footer-word" aria-hidden="true">Jurerê</div>
   </footer>
 </template>
-
-<style scoped>
-.footer {
-  position: relative;
-  overflow: hidden;
-  padding: clamp(72px, 10vw, 128px) 0 max(110px, env(safe-area-inset-bottom));
-}
-
-@media (min-width: 900px) {
-  .footer {
-    padding-bottom: 40px;
-  }
-}
-
-.footer-top {
-  display: grid;
-  gap: 32px;
-  justify-items: start;
-  padding-bottom: 56px;
-}
-
-.footer-brand :deep(.logo) {
-  align-items: flex-start;
-}
-
-.footer-claim {
-  font-family: var(--f-display);
-  font-size: var(--step-2);
-  line-height: 1.25;
-  max-width: 24ch;
-}
-
-@media (min-width: 900px) {
-  .footer-top {
-    grid-template-columns: auto 1fr;
-    align-items: end;
-    gap: 80px;
-  }
-
-  .footer-claim {
-    justify-self: end;
-    text-align: right;
-  }
-}
-
-.footer-grid {
-  display: grid;
-  gap: 40px 32px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding-block: 56px;
-  font-size: 0.98rem;
-  line-height: 1.7;
-}
-
-.footer-h {
-  color: var(--gold);
-  margin-bottom: 16px;
-  font-weight: 400;
-}
-
-address {
-  font-style: normal;
-}
-
-.footer-list {
-  display: grid;
-  gap: 6px;
-}
-
-.footer-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  opacity: 0.86;
-  transition: color 0.3s, opacity 0.3s;
-}
-
-.footer-link:hover {
-  color: var(--gold-hi);
-  opacity: 1;
-}
-
-.footer-link :deep(.icon) {
-  color: var(--gold);
-}
-
-.small {
-  font-size: 0.86rem;
-  margin-top: 6px;
-}
-
-.footer-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 12px;
-  padding-top: 28px;
-  font-size: 0.82rem;
-  color: var(--muted-dark);
-}
-
-.footer-word {
-  font-family: var(--f-display);
-  font-style: italic;
-  font-size: clamp(7rem, 26vw, 24rem);
-  line-height: 0.75;
-  text-align: center;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--line-dark);
-  margin-top: 48px;
-  user-select: none;
-  pointer-events: none;
-}
-</style>

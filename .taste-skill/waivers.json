@@ -1,0 +1,5 @@
+[
+  { "check": "street-number", "target": "p.type-moment", "reason": "Cliente real: Rua das Algas, 389, sala 01 é o endereço publicado pelo próprio salão no Google e no Instagram; o número é necessário para SEO local (NAP igual ao perfil do Google)." },
+  { "check": "phone-number", "target": "div.nav__actions", "reason": "Cliente real: (48) 99612-3993 é o WhatsApp de agendamento publicado pelo salão; agendar pelo WhatsApp é a ação principal pedida pelo cliente." },
+  { "check": "row-lines", "target": "div.grid.trio", "reason": "É a composição trio dealt por sections.md (4:5 no span-5, 1:1 no span-4, 4:3 no span-3, topos na mesma linha): as três alturas são a própria receita." }
+]
