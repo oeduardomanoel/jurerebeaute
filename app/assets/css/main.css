@@ -1,7 +1,7 @@
 /* ==========================================================================
    Jurerê Beauté · sistema visual
    Preto e grafite da sacola, dourado do anel do logo, marfim das paredes do salão.
-   Montserrat em títulos e texto, Allison (manuscrita, a mais próxima do logo) nos destaques.
+   Montserrat em títulos e texto, Great Vibes (manuscrita, como o logo) nos destaques.
    ========================================================================== */
 
 :root {
@@ -23,7 +23,7 @@
 
   --f-display: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --f-body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --f-script: 'Allison', 'Brush Script MT', cursive;
+  --f-script: 'Great Vibes', 'Brush Script MT', cursive;
 
   --gutter: clamp(20px, 5vw, 72px);
   --max: 1360px;
@@ -228,8 +228,8 @@ ol {
   font-family: var(--f-script);
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5em;
-  line-height: 0.7;
+  font-size: 1.28em;
+  line-height: 0.8;
   letter-spacing: 0;
   color: var(--gold-text);
 }

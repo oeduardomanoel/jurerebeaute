@@ -250,8 +250,8 @@ onMounted(() => {
   font-family: var(--f-script);
   font-style: normal;
   font-weight: 400;
-  font-size: 1.55em;
-  line-height: 0.6;
+  font-size: 1.3em;
+  line-height: 0.75;
   letter-spacing: 0;
   color: var(--gold);
   background: var(--gold-grad);

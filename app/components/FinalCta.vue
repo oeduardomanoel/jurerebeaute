@@ -71,8 +71,8 @@ withDefaults(defineProps<{ message?: string }>(), { message: 'Oi! Vim pelo site 
 .fc-title em {
   font-family: var(--f-script);
   font-style: normal;
-  font-size: 1.5em;
-  line-height: 0.7;
+  font-size: 1.28em;
+  line-height: 0.8;
   color: var(--gold-hi);
 }
 

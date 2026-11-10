@@ -49,7 +49,7 @@ li {
 
 li.alt {
   font-family: var(--f-script);
-  font-size: 1.6em;
+  font-size: 1.3em;
   line-height: 0.8;
 }
 
