@@ -13,11 +13,13 @@
   --ink: #1a1815;
   --muted: #5f584e;
   --muted-dark: #b3aa9c;
-  --gold: #d4a853;
-  --gold-hi: #e6c27a;
-  --gold-text: #7a5c22;
+  --gold: #e9b04c;
+  --gold-hi: #f7cf7e;
+  --gold-deep: #c98e2c;
+  --gold-text: #865b12;
+  --gold-grad: linear-gradient(135deg, #f8d488 0%, #e9b04c 48%, #cf952f 100%);
   --line: rgba(26, 24, 21, 0.14);
-  --line-dark: rgba(230, 194, 122, 0.22);
+  --line-dark: rgba(247, 207, 126, 0.22);
 
   --f-display: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --f-body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -324,15 +326,15 @@ ol {
 }
 
 .btn--gold {
-  background: var(--gold);
+  background: var(--gold-grad);
   border-color: var(--gold);
   color: var(--noir);
   --fill: var(--ivory);
-  box-shadow: 0 10px 30px -12px rgba(212, 168, 83, 0.6);
+  box-shadow: 0 10px 30px -12px rgba(233, 176, 76, 0.6);
 }
 
 .btn--gold:hover {
-  box-shadow: 0 16px 36px -12px rgba(212, 168, 83, 0.75);
+  box-shadow: 0 16px 36px -12px rgba(233, 176, 76, 0.75);
 }
 
 .btn--ink {

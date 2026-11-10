@@ -60,7 +60,7 @@ watch(() => route.fullPath, () => (open.value = false))
 
       <div class="hd-actions">
         <a class="btn hd-cta" :href="waLink('Oi! Vim pelo site e quero agendar uma avaliação no Jurerê Beauté.')" target="_blank" rel="noopener" data-cta="header">
-          <Icon name="whatsapp" /><span>Agende sua avaliação</span>
+          <Icon name="calendar" /><span>Agende sua avaliação</span>
         </a>
         <button class="hd-burger" type="button" :aria-expanded="open" aria-controls="menu" @click="open = !open">
           <span class="sr-only">{{ open ? 'Fechar menu' : 'Abrir menu' }}</span>

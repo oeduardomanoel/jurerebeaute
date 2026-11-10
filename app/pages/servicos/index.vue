@@ -51,7 +51,7 @@ useJsonLd([
 <style scoped>
 .sx {
   padding: calc(var(--header-h) + clamp(40px, 7vw, 96px)) 0 clamp(64px, 8vw, 110px);
-  background: radial-gradient(90% 70% at 90% 10%, rgba(212, 168, 83, 0.14), transparent 60%), var(--noir);
+  background: radial-gradient(90% 70% at 90% 10%, rgba(233, 176, 76, 0.14), transparent 60%), var(--noir);
 }
 
 .sx-in {

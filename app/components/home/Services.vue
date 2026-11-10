@@ -1,30 +1,10 @@
 <script setup lang="ts">
 import { services } from '#shared/data/services'
 import { waLink } from '#shared/data/site'
-
-const root = ref<HTMLElement>()
-const preview = ref<HTMLElement>()
-const active = ref<string | null>(null)
-const { $motion } = useNuxtApp()
-
-// Foto que segue o cursor sobre a lista (só em telas com mouse).
-let xTo: any, yTo: any
-onMounted(() => {
-  const m = $motion as any
-  if (!m || !preview.value || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
-  xTo = m.gsap.quickTo(preview.value, 'x', { duration: 0.55, ease: 'power3' })
-  yTo = m.gsap.quickTo(preview.value, 'y', { duration: 0.55, ease: 'power3' })
-})
-function move(e: MouseEvent) {
-  if (!xTo || !root.value) return
-  const r = root.value.getBoundingClientRect()
-  xTo(e.clientX - r.left)
-  yTo(e.clientY - r.top)
-}
 </script>
 
 <template>
-  <section id="servicos" ref="root" class="sv section dark" aria-labelledby="sv-title" @mousemove="move" @mouseleave="active = null">
+  <section id="servicos" class="sv section dark" aria-labelledby="sv-title">
     <div class="container">
       <header class="sv-head">
         <p class="label">Serviços</p>
@@ -33,10 +13,10 @@ function move(e: MouseEvent) {
       </header>
 
       <ol class="sv-list" v-reveal="'stagger'">
-        <li v-for="s in services" :key="s.slug" :class="{ dim: active && active !== s.slug }" @mouseenter="active = s.slug">
+        <li v-for="s in services" :key="s.slug">
           <NuxtLink :to="`/servicos/${s.slug}`" class="sv-row">
             <span class="sv-i">{{ s.index }}</span>
-            <span class="sv-thumb frame"><Pic :name="s.image" :alt="s.name" sizes="80px" /></span>
+            <span class="sv-thumb frame"><Pic :name="s.image" :alt="s.name" sizes="100px" /></span>
             <span class="sv-name">{{ s.name }}</span>
             <span class="sv-card">{{ s.card }}</span>
             <span class="sv-go" aria-hidden="true"><Icon name="arrow-up-right" /></span>
@@ -50,11 +30,6 @@ function move(e: MouseEvent) {
       </p>
     </div>
 
-    <div ref="preview" class="sv-preview" :class="{ on: !!active }" aria-hidden="true">
-      <div class="sv-preview-in">
-        <Pic v-for="s in services" :key="s.slug" :name="s.image" alt="" sizes="300px" :class="{ show: active === s.slug }" />
-      </div>
-    </div>
   </section>
 </template>
 
@@ -102,9 +77,6 @@ function move(e: MouseEvent) {
   transition: opacity 0.45s var(--ease);
 }
 
-li.dim .sv-row {
-  opacity: 0.35;
-}
 
 .sv-i {
   grid-area: i;
@@ -116,6 +88,7 @@ li.dim .sv-row {
 
 .sv-thumb {
   grid-area: thumb;
+  overflow: hidden;
   width: 64px;
   height: 80px;
   border-radius: 10px;
@@ -154,6 +127,14 @@ li.dim .sv-row {
   transform: translateX(12px);
 }
 
+.sv-thumb :deep(img) {
+  transition: transform 0.8s var(--ease);
+}
+
+.sv-row:hover .sv-thumb :deep(img) {
+  transform: scale(1.06);
+}
+
 .sv-row:hover .sv-go,
 .sv-row:focus-visible .sv-go {
   background: var(--gold);
@@ -164,14 +145,16 @@ li.dim .sv-row {
 
 @media (min-width: 960px) {
   .sv-row {
-    grid-template-columns: 4rem 1.25fr 1fr 52px;
-    grid-template-areas: 'i name card go';
+    grid-template-columns: 3rem 84px 1.25fr 1fr 52px;
+    grid-template-areas: 'i thumb name card go';
     gap: 32px;
-    padding: 30px 0;
+    padding: 24px 0;
   }
 
   .sv-thumb {
-    display: none;
+    width: 84px;
+    height: 104px;
+    align-self: center;
   }
 }
 
@@ -187,54 +170,4 @@ li.dim .sv-row {
   color: var(--gold-hi);
 }
 
-.sv-preview {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 3;
-  width: 250px;
-  aspect-ratio: 4 / 5;
-  margin: -160px 0 0 -125px;
-  pointer-events: none;
-  display: none;
-}
-
-@media (hover: hover) and (pointer: fine) and (min-width: 960px) {
-  .sv-preview {
-    display: block;
-  }
-}
-
-.sv-preview-in {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 999px 999px 18px 18px;
-  transform: scale(0.4) rotate(-6deg);
-  opacity: 0;
-  transition: transform 0.6s var(--ease), opacity 0.35s;
-  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7);
-}
-
-.sv-preview.on .sv-preview-in {
-  transform: none;
-  opacity: 1;
-}
-
-.sv-preview img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transform: scale(1.15);
-  transition: opacity 0.45s, transform 0.85s var(--ease);
-}
-
-.sv-preview img.show {
-  opacity: 1;
-  transform: none;
-}
 </style>

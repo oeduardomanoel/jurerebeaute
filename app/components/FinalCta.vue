@@ -45,7 +45,7 @@ withDefaults(defineProps<{ message?: string }>(), { message: 'Oi! Vim pelo site 
   position: absolute;
   inset: 22px;
   border-radius: 50%;
-  border: 1px solid rgba(230, 194, 122, 0.1);
+  border: 1px solid rgba(247, 207, 126, 0.1);
 }
 
 .fc-selo {
